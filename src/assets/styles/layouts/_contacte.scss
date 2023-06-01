@@ -1,0 +1,145 @@
+@import "base";
+
+// estilització de les dades de contacte i el mapa
+// per dispositius petits o que no suporten el grid
+.dades {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+.description-list {
+  text-align: center;
+}
+
+.contacte {
+  margin-top: 2rem;
+}
+
+// definició dels estils del formulari
+.input-text {
+  width: 100%; /* Full width */
+  color: $text-color;
+  background-color: $bg-form-color;
+  border: 1px solid $text-color; /* Gray border */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  padding: 8px; /* Some padding */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  resize: vertical; /* Allow the user to vertically resize the textarea */
+}
+
+.info-privacitat {
+  font-size: 0.75rem;
+}
+
+.input-checkbox {
+  accent-color: $primary-color;
+}
+
+.form-container {
+  text-align: center;
+}
+
+/* Style the submit button with a specific background color etc */
+.btn {
+  width: 6rem;
+  height: 2rem;
+  color: $secondary-dark;
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  margin-top: 10px;
+  padding: 2px;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  border: 1px solid $text-color;
+}
+
+// fi de la definició d"estils del formulari
+
+
+// en cas que suporti grid, es gestiona l"estil i la configuració
+// de les pàgines a través d"un grid
+@supports (display: grid) {
+
+  .dades {
+    margin-bottom: 1rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .map {
+    margin-bottom: 0;
+  }
+
+  .contacte {
+    width: 90vw;
+    margin: auto;
+    grid-row: 3 / 4;
+  }
+
+  @media screen and (min-width: $tablet-min-width) {
+
+    // ja no mostrem l"hr en tenir el grid de les dades i el mapa
+    .hr-contacte {
+      display: none;
+    }
+
+    // distribuïm les dades i el mapa en un grid amb dues columnes
+    .dades {
+      display: grid;
+      align-items: center;
+      gap: 20px;
+      grid-column: 2 / 8;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: fit-content 1fr;
+
+      > .titol-pagina {
+        grid-column: 1 / 3;
+        grid-row: 1;
+      }
+    }
+
+    .map {
+      width: 100%;
+      height: 230px;
+      margin: auto;
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+
+    .description-list {
+      width: 80%;
+      text-align: start;
+      margin: auto;
+      margin-bottom: 0;
+      grid-column: 2 / 3;
+      grid-row: 2;
+    }
+
+    .contacte {
+      width: revert;
+      grid-column: 2 / 8;
+    }
+  }
+
+  @media screen and (min-width: $pc-min-width) {
+
+    .dades {
+      grid-column: 4 / 10;
+    }
+
+    .contacte {
+      grid-column: 4 / 10;
+    }
+  }
+}
