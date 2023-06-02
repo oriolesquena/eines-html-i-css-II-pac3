@@ -15,33 +15,29 @@
   <title>Club Escacs Olot</title>
 </head>
 
-<body class="body">
+<body class="bg-dark-green">
   <include src="./views/header.html"></include>
-
-  <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-    <img class="w-24 h-24 rounded-full mx-auto" src="./assets/images/sarah-dayan.jpg" alt="" width="384" height="512">
-    <div class="pt-6 text-center space-y-4">
-      <blockquote>
-        <p class="text-lg font-medium">
-          “Tailwind CSS is the only framework that I've seen scale
-          on large teams. It’s easy to customize, adapts to any design,
-          and the build size is tiny.”
-        </p>
-      </blockquote>
-      <figcaption class="font-medium">
-        <div class="text-sky-500 dark:text-sky-400">
-          Sarah Dayan
-        </div>
-        <div class="text-slate-700 dark:text-slate-500">
-          Staff Engineer, Algolia
-        </div>
-      </figcaption>
+  <div class="grid grid-rows-1 grid-cols-1 items-center">
+    <div class="row-start-1 row-end-1 col-start-1 col-end-1 bg-portada opacity-30 min-h-[50vh] md:min-h-[60vh]"></div>
+    <div class="row-start-1 row-end-1 col-start-1 col-end-1 z-10 flex flex-col gap-12">
+      <h2 class="text-4xl md:text-6xl xl:text-7xl font-light text-center text-light-gray">
+        Benvingut al</h2>
+      <div
+        class="flex flex-col lg:flex-row gap-4 lg:gap-8 justify-center text-6xl md:text-8xl xl:text-9xl font-serif text-center">
+        <h1 class="text-lime-200 drop-shadow">Club</h1>
+        <h1 class="text-lime-400">Escacs</h1>
+        <h1 class="text-lime-200">Olot</h1>
+      </div>
     </div>
-  </figure>
-
-
+  </div>
+  <div class="w-11/12 md:w-9/12 h-[400px] md:h-[600px] xl:h-[800px] mx-auto my-12">
+    <h1 class="text-2xl md:text-4xl xl:text-5xl font-light text-center text-light-gray mb-4"><i
+        class="fa-solid fa-chess-board"></i> Resol el trencaclosques del dia!</h1>
+    <iframe class="h-[87%] mx-auto md:w-[470px] xl:w-[640px]"
+      src="https://lichess.org/training/frame?theme=marble&bg=dark" allowtransparency="true"></iframe>
+  </div>
+  <hr class="w-screen h-0.5 bg-light-green/30" />
   <include src="./views/footer.html"></include>
-  <script type="module" src="./assets/scripts/play.js"></script>
   <script type="module" src="./assets/scripts/img.js"></script>
   <!-- do not remove this line! -->
 </body>

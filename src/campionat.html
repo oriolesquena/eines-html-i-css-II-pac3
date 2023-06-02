@@ -19,11 +19,13 @@
   <include src="./views/header.html"></include>
   <div class="grid grid-rows-1 grid-cols-1 items-center">
     <h1
-      class="row-span-full col-span-full z-10 text-5xl md:w-9/12 md:mx-auto md:text-7xl font-light text-center text-light-gray">
+      class="row-start-1 row-end-1 col-start-1 col-end-1 z-10 text-5xl md:w-9/12 md:mx-auto md:text-7xl font-light text-center text-light-gray">
       Campionat
       del Club
     </h1>
-    <div class="row-span-full col-span-full w-screen h-[30vh] md:h-[60vh] bg-image"></div>
+    <div
+      class="row-start-1 row-end-1 col-start-1 col-end-1 bg-championship opacity-30 bg-center bg-cover bg-no-repeat w-screen h-[30vh] md:h-[60vh]">
+    </div>
   </div>
   <main class="text-light-gray my-8 px-5 md:w-9/12 lg:w-3/5 md:mx-auto max-w-screen-lg">
     <div class="flex flex-col gap-8">
@@ -106,7 +108,6 @@
   </main>
   <hr class="w-screen h-0.5 bg-light-green/30" />
   <include src="./views/footer.html"></include>
-  <script type="module" src="./assets/scripts/play.js"></script>
   <script type="module" src="./assets/scripts/img.js"></script>
   <!-- do not remove this line! -->
 </body>

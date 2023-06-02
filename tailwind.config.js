@@ -9,6 +9,28 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Abril Fatface', ...defaultTheme.fontFamily.serif],
+      },
+      width: {
+        '30%': '30%',
+        '45%': '45%',
+      },
+      minHeight: {
+        'members-info': '13rem',
+      },
+      aspectRatio: {
+        '3/2': '3 / 2',
+      },
+      boxShadow: {
+        members: '0 0 5px 0.1px #d5dcd7',
+      },
+      backgroundImage: {
+        portada: "url('/src/assets/images/bg-portada.jpg')",
+        logo: "url('/src/assets/images/logo.png')",
+        championship: "url('/src/assets/images/bg-campionat.jpeg')",
+      },
+      backgroundSize: {
+        'size-logo': '130px',
       },
     },
     colors: {
